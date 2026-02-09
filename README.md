@@ -6,7 +6,8 @@
 [![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=java)](https://www.java.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![Redis](https://img.shields.io/badge/Redis-Enabled-red?style=for-the-badge&logo=redis)](https://redis.io/)
-[![bStats](https://img.shields.io/badge/bStats-29429-00ADD8?style=for-the-badge)](https://bstats.org/plugin/bukkit/29429)
+[![bStats Servers](https://img.shields.io/bstats/servers/29429?style=for-the-badge&label=Servers&color=blue)](https://bstats.org/plugin/bukkit/29429)
+[![bStats Players](https://img.shields.io/bstats/players/29429?style=for-the-badge&label=Players&color=green)](https://bstats.org/plugin/bukkit/29429)
 
 **A powerful, feature-rich server management plugin with cross-server Redis integration**
 
@@ -45,7 +46,6 @@ HavocSMP is a comprehensive server management plugin designed for Minecraft netw
 - **Player Teleports** - `/tp`, `/tphere` with cooldowns
 - **Spawn System** - `/spawn` and `/setspawn`
 - **Hub Integration** - `/hub` for quick hub return
-- **Server Switching** - `/join <server>` for cross-server navigation
 
 ### 📢 Communication & Announcements
 - **Alert System** 
@@ -57,7 +57,7 @@ HavocSMP is a comprehensive server management plugin designed for Minecraft netw
 
 ### 💰 Economy Features
 - **Starter Kit** (`/starter`) - One-time kit with 24hr cooldown
-- **Withdraw** (`/withdraw`) - Convert balance to physical notes (Vault required)
+- **Withdraw Hearts** (`/withdraw`) - Convert hearts to physical items (Lifesteal servers)
 
 ### ⚙️ Administrative Tools
 - Config hot-reload with `/havocsmp reload`
@@ -87,7 +87,6 @@ HavocSMP is a comprehensive server management plugin designed for Minecraft netw
 
 | Command | Aliases | Permission | Description |
 |---------|---------|------------|-------------|
-| `/vanish` | `/v` | `havocsmp.vanish` | Toggle vanish mode |
 | `/commandspy` | `/cmdspy` | `havocsmp.commandspy` | Toggle command monitoring |
 | `/togglechat` | `/tc` | `havocsmp.togglechat` | Enable/disable server chat |
 
@@ -129,7 +128,6 @@ HavocSMP is a comprehensive server management plugin designed for Minecraft netw
 | `/spawn` | - | `havocsmp.spawn` | Teleport to spawn |
 | `/setspawn` | - | `havocsmp.setspawn` | Set spawn location |
 | `/hub` | - | `havocsmp.hub` | Teleport to hub server |
-| `/join <server>` | - | `havocsmp.join` | Connect to specific server |
 
 </details>
 
@@ -261,7 +259,7 @@ Redis enables **real-time cross-server synchronization**, ensuring a seamless ex
 - ✅ Instant data synchronization
 - ✅ Reduced database load
 - ✅ Cross-server cooldowns prevent abuse
-- ✅ Network-wide vanish and preferences
+- ✅ Network-wide preferences sync
 - ✅ Real-time global announcements
 
 ---
@@ -285,7 +283,6 @@ Redis enables **real-time cross-server synchronization**, ensuring a seamless ex
 - **Java** 21+
 
 ### Optional
-- **[Vault](https://www.spigotmc.org/resources/vault.34315/)** - Required for `/withdraw` command
 - **Redis** - Required for cross-server features (highly recommended)
 
 ### Built-in
@@ -308,6 +305,7 @@ Redis enables **real-time cross-server synchronization**, ensuring a seamless ex
 
 ### Bypass Permissions
 - `havocsmp.cooldown.bypass` - Bypass all command cooldowns
+- `havocsmp.vanish.see` - See vanished players
 - `havocsmp.chat.bypass` - Bypass chat restrictions
 
 ### Gamemode Permissions
@@ -370,6 +368,7 @@ All data is **completely anonymous** and helps improve the plugin. You can opt-o
 
 Need help or have questions?
 
+- 🐛 **[Issues](https://github.com/circuitmc/HavocSMPPlugin/issues)** - Report bugs or request features
 - 💬 **Discord** - Join our community server
 
 ---
@@ -389,3 +388,4 @@ Need help or have questions?
 **Made with ❤️ for the Minecraft community**
 
 </div>
+
