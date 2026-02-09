@@ -2,7 +2,7 @@
 
 # 🎮 HavocSMPPlugin
 
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.16--1.21.4-brightgreen?style=for-the-badge)](https://www.spigotmc.org/)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.16--1.21.11-brightgreen?style=for-the-badge)](https://www.spigotmc.org/)
 [![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=java)](https://www.java.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![Redis](https://img.shields.io/badge/Redis-Enabled-red?style=for-the-badge&logo=redis)](https://redis.io/)
