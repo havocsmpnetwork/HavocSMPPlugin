@@ -1,11 +1,12 @@
 <div align="center">
 
-# 🎮 HavocSMPPlugin
+# 🎮 HavocSMP Plugin
 
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.16--1.21.11-brightgreen?style=for-the-badge)](https://www.spigotmc.org/)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.16--1.21.4-brightgreen?style=for-the-badge)](https://www.spigotmc.org/)
 [![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=java)](https://www.java.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 [![Redis](https://img.shields.io/badge/Redis-Enabled-red?style=for-the-badge&logo=redis)](https://redis.io/)
+[![bStats](https://img.shields.io/badge/bStats-29429-00ADD8?style=for-the-badge)](https://bstats.org/plugin/bukkit/29429)
 
 **A powerful, feature-rich server management plugin with cross-server Redis integration**
 
@@ -24,6 +25,7 @@ HavocSMP is a comprehensive server management plugin designed for Minecraft netw
 ### 🔌 Core Systems
 - **MySQL Database** - Persistent data storage for player information
 - **Redis Integration** - Real-time cross-server synchronization and caching
+- **bStats Metrics** - Anonymous usage statistics for plugin improvement ([View Stats](https://bstats.org/plugin/bukkit/29429))
 - **Configurable Messages** - Fully customizable via `messages.yml`
 - **Smart Cooldowns** - Command cooldowns with cross-server syncing
 - **Permission System** - Fine-grained access control
@@ -43,6 +45,7 @@ HavocSMP is a comprehensive server management plugin designed for Minecraft netw
 - **Player Teleports** - `/tp`, `/tphere` with cooldowns
 - **Spawn System** - `/spawn` and `/setspawn`
 - **Hub Integration** - `/hub` for quick hub return
+- **Server Switching** - `/join <server>` for cross-server navigation
 
 ### 📢 Communication & Announcements
 - **Alert System** 
@@ -84,6 +87,7 @@ HavocSMP is a comprehensive server management plugin designed for Minecraft netw
 
 | Command | Aliases | Permission | Description |
 |---------|---------|------------|-------------|
+| `/vanish` | `/v` | `havocsmp.vanish` | Toggle vanish mode |
 | `/commandspy` | `/cmdspy` | `havocsmp.commandspy` | Toggle command monitoring |
 | `/togglechat` | `/tc` | `havocsmp.togglechat` | Enable/disable server chat |
 
@@ -125,6 +129,7 @@ HavocSMP is a comprehensive server management plugin designed for Minecraft netw
 | `/spawn` | - | `havocsmp.spawn` | Teleport to spawn |
 | `/setspawn` | - | `havocsmp.setspawn` | Set spawn location |
 | `/hub` | - | `havocsmp.hub` | Teleport to hub server |
+| `/join <server>` | - | `havocsmp.join` | Connect to specific server |
 
 </details>
 
@@ -265,7 +270,7 @@ Redis enables **real-time cross-server synchronization**, ensuring a seamless ex
 
 ### Quick Setup
 
-1. **Download** the latest `HavocSMPPlugin` plugin from [our website](https://havocsmp.lovable.app/plugins/1)
+1. **Download** the latest `HavocSMPPlugin.jar` from [our website](https://havocsmp.lovable.app/plugins/1)
 2. **Place** the JAR in your server's `plugins/` folder
 3. **Start** the server to generate configuration files
 4. **Configure** database and Redis in `config.yml`
@@ -276,12 +281,15 @@ Redis enables **real-time cross-server synchronization**, ensuring a seamless ex
 ## 🔧 Dependencies
 
 ### Required
-- **Spigot/Paper** 1.16 or higher (Tested on 1.21.8-1.21.11)
+- **Spigot/Paper** 1.16 or higher (Tested on 1.21.4)
 - **Java** 21+
 
 ### Optional
 - **[Vault](https://www.spigotmc.org/resources/vault.34315/)** - Required for `/withdraw` command
 - **Redis** - Required for cross-server features (highly recommended)
+
+### Built-in
+- **[bStats](https://bstats.org/)** - Anonymous metrics collection (automatically included)
 
 ---
 
@@ -339,6 +347,22 @@ All other permissions follow the format: `havocsmp.<command>`
           │ (Persistent Storage)  │
           └───────────────────────┘
 ```
+
+---
+
+## 📊 Statistics & Metrics
+
+This plugin uses bStats to collect anonymous usage statistics. This helps us understand how the plugin is being used and improve it based on real-world data.
+
+**View our stats:** [bStats Plugin Page](https://bstats.org/plugin/bukkit/29429)
+
+### Collected Data
+- Server count and player count
+- Minecraft version distribution
+- Plugin version usage
+- Java version statistics
+
+All data is **completely anonymous** and helps improve the plugin. You can opt-out by setting `enabled: false` in `plugins/bStats/config.yml`.
 
 ---
 
