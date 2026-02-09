@@ -368,7 +368,7 @@ All data is **completely anonymous** and helps improve the plugin. You can opt-o
 
 Need help or have questions?
 
-- 🐛 **[Issues](https://github.com/circuitmc/HavocSMPPlugin/issues)** - Report bugs or request features
+- 🐛 **[Issues](https://github.com/havocsmpnetwork/HavocSMPPlugin/issues)** - Report bugs or request features
 - 💬 **Discord** - Join our community server
 
 ---
